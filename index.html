@@ -3,65 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
+    <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
       <header>
-        <nav class="flex justify-around items-center">
-          <img class="w-16" src="./assets/Group.png" alt="" />
-          <div>
-            <h1 class="text-3xl font-bold">
-              $ <span id="main-balance">4500</span>
-            </h1>
-            <p class="border rounded p-1">available balance</p>
+        <nav class="flex justify-center items-center mt-8">
+          <div
+            class="mt-10 relative flex justify-center items-center w-9/12 mb-10"
+          >
+            <img class="w-56 absolute" src="./assets/bg.png" alt="" />
+            <img class="w-20" src="./assets/Group.png" alt="" />
           </div>
-          <button class="btn">logout</button>
         </nav>
-        <section class="mt-10">
-          <h1 class="text-2xl font-bold mb-2">Welcome to Payooo!</h1>
-          <p>
-            Enjoy easy and convenient financial services with us. Cashout charge
-            is low and
-          </p>
-
-          <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
-            <div
-              id="add-money-box"
-              class="box cursor-pointer border p-4 text-center rounded-sm"
-            >
-              <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
-              <h3>Add Money</h3>
-            </div>
-            <div id="cashout-box" class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/purse1.png" alt="" />
-              <h3>Cash out</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/money1.png" alt="" />
-              <h3>Pay Bill</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
-              <h3>Transfer money</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
-              <h3>get Bonus</h3>
-            </div>
-            <div class="box border p-4 text-center rounded-sm">
-              <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
-              <h3>Transaction history</h3>
-            </div>
-          </div>
-        </section>
       </header>
+
+      <!-- login section -->
+      <div class="">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Mobile Number</span>
+                </label>
+                <input id="account-number"
+                  type="number" value="01978997745"
+                  placeholder="Enter your number"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">4 Digit Pin</span>
+                </label>
+                <input id="pin" value="1234"
+                  type="text"
+                  placeholder="Enter 4 Digit Pin"
+                  class="input input-bordered"
+                  required
+                />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover"
+                    >Forgot password?</a
+                  >
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="login-btn" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <script src="script/login.js"></script>
   </body>
 </html>
